@@ -7,6 +7,9 @@ import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltip} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-root',
@@ -36,5 +39,5 @@ export class AppComponent {
 
 }
 
-export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule];
+export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, MatButtonModule, MatTooltip];
 export const globalProviders = [provideNativeDateAdapter()];

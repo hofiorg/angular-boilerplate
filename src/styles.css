@@ -1,5 +1,10 @@
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; zoom: 70%; background: linear-gradient(180deg,#d5dee7 0,#e8ebf2 50%,#e2e7ed),linear-gradient(180deg,rgba(0,0,0,.02) 50%,hsla(0,0%,100%,.02) 61%,rgba(0,0,0,.02) 73%),linear-gradient(33deg,hsla(0,0%,100%,.2),rgba(0,0,0,.2)) !important; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  zoom: 0.75;
+  background: linear-gradient(180deg,#d5dee7 0,#e8ebf2 50%,#e2e7ed),linear-gradient(180deg,rgba(0,0,0,.02) 50%,hsla(0,0%,100%,.02) 61%,rgba(0,0,0,.02) 73%),linear-gradient(33deg,hsla(0,0%,100%,.2),rgba(0,0,0,.2)) !important;
+}
 
 div.view {
   margin: 0 auto;
@@ -11,7 +16,7 @@ div.view {
 
 div.header {
   margin: 0 auto;
-  background-color: darkblue;
+  background-color: #0a2c68;
   width: 1600px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3);
   height: 40px;
@@ -25,7 +30,7 @@ h1.title {
 }
 
 div.title-underline {
-  background-color: darkblue;
+  background-color: #0a2c68;
   width: 1600px;
   height: 4px;
   margin: 0 auto 10px;
@@ -34,3 +39,13 @@ div.title-underline {
 form.form {
   width: 100%;
 }
+
+mat-form-field {
+  width: 100%;
+}
+
+.tooltip {
+  left: 350px;
+  top: 52px;
+}
+

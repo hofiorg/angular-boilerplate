@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {DemoService} from '../../services/demo.service';
 import {globalModules, globalProviders} from '../../app.component';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-demo-view',
@@ -11,6 +12,8 @@ import {globalModules, globalProviders} from '../../app.component';
   styleUrl: './demo-view.component.css'
 })
 export class DemoViewComponent implements OnInit {
+  private _snackBar = inject(MatSnackBar);
+
   message: string = '';
   errorMessage: string = '';
 
@@ -28,5 +31,18 @@ export class DemoViewComponent implements OnInit {
       },
       complete: () => console.info('complete')
     });
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message, undefined, {
+      duration: 2000,
+    });
+  }
+
+  getTooltipText() {
+    return `Multi
+    Line
+    Tooltip
+    Example`;
   }
 }

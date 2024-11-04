@@ -76,6 +76,12 @@ ng add @angular/material
 npm install bootstrap --save
 ```
 
+### Date adapter for localized dates 
+
+```sh
+ng add @angular/material-date-fns-adapter
+```
+
 # Geneated Readme (remove later)
 
 ## Code scaffolding

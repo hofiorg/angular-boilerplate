@@ -10,11 +10,15 @@
       <div class="row">
         <div class="col-2">
           <mat-form-field>
-            <mat-label>Eingang von</mat-label>
-            <input matInput [matDatepicker]="picker">
-            <mat-hint>DD.MM.YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-label>Eingang von/bis</mat-label>
+            <mat-date-range-input
+              [rangePicker]="campaignOnePicker">
+              <input matStartDate placeholder="Eingang von">
+              <input matEndDate placeholder="Eingang bis">
+            </mat-date-range-input>
+            <mat-hint>DD.MM.YYYY – DD.MM.YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+            <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
           </mat-form-field>
         </div>
       </div>
@@ -23,12 +27,18 @@
           <mat-form-field>
             <mat-label>System</mat-label>
             <input matInput value="MockA">
+            <button matSuffix mat-icon-button aria-label="Search" (click)="openSnackBar('Search Button clicked')">
+              <mat-icon>search</mat-icon>
+            </button>
           </mat-form-field>
         </div>
-        <div class="col">
+        <div class="col-2">
           <mat-form-field>
             <mat-label>Nachrichtentyp</mat-label>
             <input matInput value="1">
+            <button matSuffix mat-icon-button aria-label="Info" [matTooltip]="getTooltipText()" matTooltipPosition="right" matTooltipClass="tooltip">
+              <mat-icon>info</mat-icon>
+            </button>
           </mat-form-field>
         </div>
       </div>
