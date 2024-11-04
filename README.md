@@ -62,7 +62,7 @@ git push -u origin main
 
 ### Angular Material
 
-```
+```sh
 ng add @angular/material
 ```
 
@@ -70,6 +70,11 @@ ng add @angular/material
 - Set up global Angular Material typography styles? yes
 - Include the Angular animations module? Include and enable animations
 
+### Bootstrap
+
+```sh
+npm install bootstrap --save
+```
 
 # Geneated Readme (remove later)
 
