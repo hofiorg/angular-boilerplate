@@ -16,6 +16,10 @@ nvm use lts/iron
 npm install -g @angular/cli
 ```
 
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
 ## Steps to reproduce
 
 ```sh
@@ -27,10 +31,14 @@ ng new angular-boilerplate
 - Which stylesheet format would you like to use? CSS
 - Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? no
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
+```sh
+git init
+git add *
+git commit -m "inital commit"
+git branch -M main
+git remote add origin https://github.com/hofiorg/angular-boilerplate.git
+git push -u origin main
+```
 
 
 
