@@ -46,7 +46,7 @@ export class DemoViewComponent implements OnInit {
     Example`;
   }
 
-  loadingIndicator = true;
+  loadingIndicator = false;
 
   rows = [
     { name: 'Austin', gender: 'Male', company: 'Swimlane' },
