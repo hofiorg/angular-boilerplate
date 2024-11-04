@@ -1,6 +1,22 @@
 
 # angular-boilerplate
 
+Basis Framework: Angular 18 - https://angular.dev/
+
+Grid System: Bootstrap v5.3 - https://getbootstrap.com/docs/5.3/layout/grid/#how-it-works
+
+State Handling: ngrx - https://ngrx.io/
+
+Components: Angular Material - https://material.angular.io/components/categories
+
+Table-Component: ngrx-datatable - http://swimlane.github.io/ngx-datatable/
+
+Server: Spring Boot (Rest + JSON) - https://spring.io/projects/spring-boot
+
+
+Additional Information:
+CSS-Zoom - https://www.w3schools.com/cssref/playdemo.php?filename=playcss_zoom
+
 ## Installation
 
 ### Install node/npm
@@ -34,7 +50,7 @@ ng new angular-boilerplate
 ```sh
 git init
 git add *
-git commit -m "inital commit"
+git commit -m "initial commit"
 git branch -M main
 git remote add origin https://github.com/hofiorg/angular-boilerplate.git
 git push -u origin main
