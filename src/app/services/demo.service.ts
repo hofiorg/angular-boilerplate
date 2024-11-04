@@ -11,7 +11,7 @@ export class DemoService {
   constructor(private http: HttpClient) {}
 
   getDemoData(): Observable<string> {
-    return of("Hello World")
+    return of("Demo View")
     //return this.http.get(this.apiUrl, { responseType: 'text' });
   }
 }

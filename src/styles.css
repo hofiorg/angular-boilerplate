@@ -1,2 +1,36 @@
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; zoom: 70%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; zoom: 70%; background: linear-gradient(180deg,#d5dee7 0,#e8ebf2 50%,#e2e7ed),linear-gradient(180deg,rgba(0,0,0,.02) 50%,hsla(0,0%,100%,.02) 61%,rgba(0,0,0,.02) 73%),linear-gradient(33deg,hsla(0,0%,100%,.2),rgba(0,0,0,.2)) !important; }
+
+div.view {
+  margin: 0 auto;
+  background: white;
+  width: 1600px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3);
+  min-height: 100%
+}
+
+div.header {
+  margin: 0 auto;
+  background-color: darkblue;
+  width: 1600px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3);
+  height: 40px;
+}
+
+h1.title {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: 20px;
+  line-height: 1.1;
+}
+
+div.title-underline {
+  background-color: darkblue;
+  width: 1600px;
+  height: 4px;
+  margin: 0 auto 10px;
+}
+
+form.form {
+  width: 100%;
+}
