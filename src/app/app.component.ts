@@ -10,6 +10,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltip} from '@angular/material/tooltip';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 
 @Component({
   selector: 'app-root',
@@ -39,5 +41,5 @@ export class AppComponent {
 
 }
 
-export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, MatButtonModule, MatTooltip];
+export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, MatButtonModule, MatTooltip, NgxDatatableModule];
 export const globalProviders = [provideNativeDateAdapter()];

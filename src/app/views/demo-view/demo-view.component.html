@@ -3,7 +3,7 @@
 
   <h1 class="title" *ngIf="message">{{ message }}</h1>
   <p *ngIf="errorMessage">{{ errorMessage }}</p>
-  <div class="title-underline"></div>
+  <div class="title-underline mb-4"></div>
 
   <form class="form">
     <div class="container-fluid">
@@ -27,7 +27,7 @@
           <mat-form-field>
             <mat-label>System</mat-label>
             <input matInput value="MockA">
-            <button matSuffix mat-icon-button aria-label="Search" (click)="openSnackBar('Search Button clicked')">
+            <button matSuffix mat-icon-button aria-label="Suchen" (click)="openSnackBar('Suchen Button clicked - 1')">
               <mat-icon>search</mat-icon>
             </button>
           </mat-form-field>
@@ -40,6 +40,39 @@
               <mat-icon>info</mat-icon>
             </button>
           </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <mat-form-field>
+            <mat-label>Nummer 1</mat-label>
+            <input matInput value="">
+          </mat-form-field>
+        </div>
+        <div class="col-2">
+          <mat-form-field>
+            <mat-label>Nummer 2</mat-label>
+            <input matInput value="">
+          </mat-form-field>
+        </div>
+        <div class="col-2 mt-3">
+          <button mat-flat-button (click)="openSnackBar('Suchen Button clicked - 2')">Suchen</button>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+          <ngx-datatable class="bootstrap"
+                         [rows]="rows"
+                         [loadingIndicator]="loadingIndicator"
+                         [columns]="columns"
+                         [headerHeight]="40"
+                         [summaryRow]="false"
+                         [summaryPosition]="'bottom'"
+                         [footerHeight]="40"
+                         [limit]="30"
+                         rowHeight="auto"
+                         columnMode="force"
+                         [reorderable]="true"></ngx-datatable>
         </div>
       </div>
     </div>

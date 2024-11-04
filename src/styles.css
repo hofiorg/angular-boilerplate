@@ -44,6 +44,11 @@ mat-form-field {
   width: 100%;
 }
 
+ngx-datatable {
+  width: 100%;
+}
+
+
 .tooltip {
   left: 350px;
   top: 52px;

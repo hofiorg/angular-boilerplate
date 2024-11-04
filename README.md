@@ -82,6 +82,12 @@ npm install bootstrap --save
 ng add @angular/material-date-fns-adapter
 ```
 
+### Ngx Datatable
+
+```sh
+npm install @swimlane/ngx-datatable
+```
+
 # Geneated Readme (remove later)
 
 ## Code scaffolding
