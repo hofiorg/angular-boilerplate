@@ -1,10 +1,42 @@
-# AngularBoilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+# angular-boilerplate
+
+## Installation
+
+### Install node/npm
+
+```sh
+nvm install lts/iron
+nvm use lts/iron
+```
+
+### Install angular
+
+```sh
+npm install -g @angular/cli
+```
+
+## Steps to reproduce
+
+```sh
+ng new angular-boilerplate
+```
+
+- Would you like to enable autocompletion? Yes
+- Would you like to share pseudonymous usage data? No
+- Which stylesheet format would you like to use? CSS
+- Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? no
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+
+
+
+
+
+# Geneated Readme (remove later)
 
 ## Code scaffolding
 
