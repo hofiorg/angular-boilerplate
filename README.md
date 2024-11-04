@@ -38,6 +38,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Steps to reproduce
 
+### New Angular Project
+
 ```sh
 ng new angular-boilerplate
 ```
@@ -46,6 +48,8 @@ ng new angular-boilerplate
 - Would you like to share pseudonymous usage data? No
 - Which stylesheet format would you like to use? CSS
 - Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? no
+
+### Git
 
 ```sh
 git init
@@ -56,8 +60,15 @@ git remote add origin https://github.com/hofiorg/angular-boilerplate.git
 git push -u origin main
 ```
 
+### Angular Material
 
+```
+ng add @angular/material
+```
 
+- Choose a prebuilt theme name, or "custom" for a custom theme: Azure/Blue
+- Set up global Angular Material typography styles? yes
+- Include the Angular animations module? Include and enable animations
 
 
 # Geneated Readme (remove later)
