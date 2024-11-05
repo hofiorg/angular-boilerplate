@@ -14,8 +14,6 @@ export class DemoService {
 
   search(): Observable<Array<Demo>> {
 
-    console.log('SEARCH SERVICE!!');
-
     // simulate 5 seconds delay
     return timer(5000).pipe(
       map(() => [

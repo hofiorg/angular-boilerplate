@@ -1,4 +1,3 @@
-
 # angular-boilerplate
 
 Basis Framework: Angular 18 - https://angular.dev/
@@ -17,6 +16,21 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 Additional Information:
 CSS-Zoom - https://www.w3schools.com/cssref/playdemo.php?filename=playcss_zoom
+
+## TODO
+
+- connect form fields for search
+- tests for store and services
+- details view
+- spring boot server to serve JSON data
+- build pipeline for GitHub
+- more validators with regular expressions
+- data pipes for tables and detail-displays
+- header with logo
+- footer?
+- permissions for routing and other ui-actions
+- login with oauth
+- material date range has no leading zeros
 
 ## Installation
 

@@ -13,23 +13,23 @@ export class DemoEffects {
   private readonly actions$ = inject(Actions);
   private readonly service = inject(DemoService);
 
-  constructor() {}
+  constructor() {
+  }
 
-  search$: Observable<Action> = createEffect(() =>
-    this.actions$.pipe(
-      ofType(DemoActionTypes.SEARCH_DEMOS),
-      mergeMap(() => {
-        return this.service.search().pipe(
-          map((demoList: Demo[]) => {
-            console.log('effect: ', demoList);
-            return ({
+  // noinspection JSUnusedGlobalSymbols
+  search$: Observable<Action> = createEffect(() => {
+      return this.actions$.pipe(
+        ofType(DemoActionTypes.SEARCH_DEMOS),
+        mergeMap(() => {
+          return this.service.search().pipe(
+            map((demoList: Demo[]) => ({
               type: DemoActionTypes.SEARCH_DEMOS_SUCCESS,
               demoList
-            });
-          }),
-          catchError((error) => of({ error, type: DemoActionTypes.SEARCH_DEMOS_FAIL }))
-        );
-      })
-    )
+            })),
+            catchError((error) => of({error, type: DemoActionTypes.SEARCH_DEMOS_FAIL}))
+          );
+        })
+      );
+    }
   );
 }

@@ -37,7 +37,6 @@ export class DemoViewComponent implements OnInit {
 
     this.demoFacade.demoList$
       .subscribe((demoList: Demo[]) => {
-        console.log('demos', demoList);
         this.demoList = demoList;
       });
     this.demoFacade.loading$
@@ -65,8 +64,7 @@ export class DemoViewComponent implements OnInit {
 
   columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
 
-  search(): void {
-    console.log('search');
+  search() {
     this.demoFacade.search({
       eingangVon: '',
       eingangBis: '',
