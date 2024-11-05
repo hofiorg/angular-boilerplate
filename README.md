@@ -14,8 +14,9 @@ Server: Spring Boot (Rest + JSON) - https://spring.io/projects/spring-boot
 
 OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
-Additional Information:
-CSS-Zoom - https://www.w3schools.com/cssref/playdemo.php?filename=playcss_zoom
+**Additional Information**
+
+- CSS-Zoom - https://www.w3schools.com/cssref/playdemo.php?filename=playcss_zoom
 
 ## TODO
 
@@ -121,4 +122,11 @@ ng add @angular/material-date-fns-adapter
 
 ```sh
 npm install @swimlane/ngx-datatable
+```
+
+### Ngrx Store and Effects
+
+```sh
+ng add @ngrx/store@latest
+ng add @ngrx/effects@latest
 ```
