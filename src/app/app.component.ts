@@ -11,6 +11,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltip} from '@angular/material/tooltip';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
+import {provideHttpClient, withFetch} from '@angular/common/http';
+import {provideAnimations} from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-root',
@@ -42,3 +44,5 @@ export class AppComponent {
 
 export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, MatButtonModule, MatTooltip, NgxDatatableModule, ReactiveFormsModule];
 export const globalProviders = [provideNativeDateAdapter()];
+
+export const globalTestProviders = [provideHttpClient(withFetch()), provideAnimations()]

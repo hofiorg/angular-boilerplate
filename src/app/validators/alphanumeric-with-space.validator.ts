@@ -6,16 +6,15 @@ import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 export function alphanumericWithSpaceValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     if (!control.value) {
-      return null; // don't validate if the control is empty (if not required)
+      return null;
     }
 
-    // Regular expression to match alphanumeric characters and spaces
-    const regex = /^[a-zA-Z0-9\s]*$/;
+    const regex = /^[a-zA-Z0-9 ]*$/;
 
     if (!regex.test(control.value)) {
-      return { alphanumericWithSpace: true }; // Return an error object if validation fails
+      return { alphanumericWithSpace: true };
     }
 
-    return null; // Return null if validation passes
+    return null;
   };
 }
