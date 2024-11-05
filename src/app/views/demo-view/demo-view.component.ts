@@ -1,9 +1,10 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {DemoService} from '../../services/demo.service';
 import {globalModules, globalProviders} from '../../app.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {alphanumericWithSpaceValidator} from '../../validators/alphanumeric-with-space.validator';
+import {DemoFacade} from '../../store/demo/demo.facade';
+import {Demo} from '../../model/demo.model';
 
 @Component({
   selector: 'app-demo-view',
@@ -18,13 +19,13 @@ export class DemoViewComponent implements OnInit {
 
   searchForm!: FormGroup;
 
-  message: string = '';
-  errorMessage: string = '';
   data = {
     system: 'MockA'
   };
+  demoList: Demo[] = [];
+  loading: boolean = true;
 
-  constructor(private demoService: DemoService) {}
+  constructor(private demoFacade: DemoFacade) {}
 
   ngOnInit(): void {
     this.searchForm = new FormGroup({
@@ -34,17 +35,15 @@ export class DemoViewComponent implements OnInit {
       ]),
     });
 
-    this.demoService.getDemoData().subscribe({
-      next: (v) => {
-        console.log(v);
-        this.message = v;
-      },
-      error: (e) => {
-        console.error(e)
-        this.errorMessage = e;
-      },
-      complete: () => console.info('complete')
-    });
+    this.demoFacade.demoList$
+      .subscribe((demoList: Demo[]) => {
+        console.log('demos', demoList);
+        this.demoList = demoList;
+      });
+    this.demoFacade.loading$
+      .subscribe((loading: boolean) => {
+        this.loading = loading;
+      });
   }
 
   get system() {
@@ -64,12 +63,17 @@ export class DemoViewComponent implements OnInit {
     Example`;
   }
 
-  loadingIndicator = false;
-
-  rows = [
-    { name: 'Austin', gender: 'Male', company: 'Swimlane' },
-    { name: 'Dany', gender: 'Male', company: 'KFC' },
-    { name: 'Molly', gender: 'Female', company: 'Burger King' }
-  ];
   columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
+
+  search(): void {
+    console.log('search');
+    this.demoFacade.search({
+      eingangVon: '',
+      eingangBis: '',
+      system: '',
+      nachrichtentyp: '',
+      nummer1: '',
+      nummer2: ''
+    })
+  }
 }

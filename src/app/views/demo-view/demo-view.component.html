@@ -1,28 +1,27 @@
 <div class="view">
   <div class="header"></div>
 
-  <h1 class="title" *ngIf="message">{{ message }}</h1>
-  <p *ngIf="errorMessage">{{ errorMessage }}</p>
-  <div class="title-underline mb-4"></div>
+  <h1 class="title">Demo View</h1>
+  <div class="title-underline mb-2"></div>
 
   <form class="form" [formGroup]="searchForm">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-2">
+        <div class="col-4 mt-2">
           <mat-form-field>
             <mat-label>Eingang von/bis</mat-label>
             <mat-date-range-input
-              [rangePicker]="campaignOnePicker">
+              [rangePicker]="eingangPicker">
               <input matStartDate placeholder="Eingang von">
               <input matEndDate placeholder="Eingang bis">
             </mat-date-range-input>
             <mat-hint>DD.MM.YYYY – DD.MM.YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
-            <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+            <mat-datepicker-toggle matIconSuffix [for]="eingangPicker"></mat-datepicker-toggle>
+            <mat-date-range-picker #eingangPicker></mat-date-range-picker>
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-2">
         <div class="col-2">
           <mat-form-field class="form-group">
             <mat-label>System</mat-label>
@@ -31,10 +30,10 @@
               <mat-icon>search</mat-icon>
             </button>
             <mat-error *ngIf="system?.hasError('maxlength') && system?.touched">
-              System - maximale Länge 30 Zeichen erlaubt
+              Eingabe zu lang
             </mat-error>
             <mat-error *ngIf="system?.hasError('alphanumericWithSpace') && system?.touched">
-              System - nur Buchstaben, Zahlen und Leerzeichen erlaubt
+              Fehlerhafte Eingabe
             </mat-error>
           </mat-form-field>
         </div>
@@ -48,7 +47,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-2">
         <div class="col-2">
           <mat-form-field>
             <mat-label>Nummer 1</mat-label>
@@ -62,7 +61,7 @@
           </mat-form-field>
         </div>
         <div class="col-2 mt-3">
-          <button mat-flat-button (click)="openSnackBar('Suchen Button clicked - 2')" type="submit" [disabled]="searchForm.invalid">Suchen</button>
+          <button mat-flat-button (click)="search()" type="submit" [disabled]="searchForm.invalid">Suchen</button>
         </div>
       </div>
     </div>
@@ -72,8 +71,8 @@
     <div class="row mt-5">
       <div class="col">
         <ngx-datatable class="material"
-                       [rows]="rows"
-                       [loadingIndicator]="loadingIndicator"
+                       [rows]="demoList"
+                       [loadingIndicator]="loading"
                        [columns]="columns"
                        [headerHeight]="40"
                        [summaryRow]="false"

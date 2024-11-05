@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable, of} from 'rxjs';
+import {map, Observable, timer} from 'rxjs';
+import {Demo} from '../model/demo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,24 @@ import {Observable, of} from 'rxjs';
 export class DemoService {
   //private apiUrl = 'http://localhost:7148/api/demo';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
-  getDemoData(): Observable<string> {
-    return of("Demo View")
+  search(): Observable<Array<Demo>> {
+
+    console.log('SEARCH SERVICE!!');
+
+    // simulate 5 seconds delay
+    return timer(5000).pipe(
+      map(() => [
+        {
+          name: "Name1",
+          gender: "Gender1",
+          company: "Company1"
+        }
+      ])
+    );
+
     //return this.http.get(this.apiUrl, { responseType: 'text' });
   }
 }

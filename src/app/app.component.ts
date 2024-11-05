@@ -13,6 +13,7 @@ import {MatTooltip} from '@angular/material/tooltip';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {provideHttpClient, withFetch} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
+import {provideMockStore} from '@ngrx/store/testing';
 
 @Component({
   selector: 'app-root',
@@ -39,10 +40,9 @@ export class AppComponent {
   constructor(private _adapter: DateAdapter<any>) {
     this._adapter.setLocale('de');
   }
-
 }
 
 export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, MatButtonModule, MatTooltip, NgxDatatableModule, ReactiveFormsModule];
 export const globalProviders = [provideNativeDateAdapter()];
 
-export const globalTestProviders = [provideHttpClient(withFetch()), provideAnimations()]
+export const globalTestProviders = [provideHttpClient(withFetch()), provideAnimations(), provideMockStore()]
