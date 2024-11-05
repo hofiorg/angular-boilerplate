@@ -2,6 +2,8 @@ import {Component, inject, OnInit} from '@angular/core';
 import {DemoService} from '../../services/demo.service';
 import {globalModules, globalProviders} from '../../app.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {alphanumericWithSpaceValidator} from '../../validators/alphanumeric-with-space.validator';
 
 @Component({
   selector: 'app-demo-view',
@@ -14,12 +16,24 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class DemoViewComponent implements OnInit {
   private _snackBar = inject(MatSnackBar);
 
+  searchForm!: FormGroup;
+
   message: string = '';
   errorMessage: string = '';
+  data = {
+    system: 'MockA'
+  };
 
   constructor(private demoService: DemoService) {}
 
   ngOnInit(): void {
+    this.searchForm = new FormGroup({
+      system: new FormControl(this.data.system, [
+        alphanumericWithSpaceValidator(),
+        Validators.maxLength(30)
+      ]),
+    });
+
     this.demoService.getDemoData().subscribe({
       next: (v) => {
         console.log(v);
@@ -31,6 +45,10 @@ export class DemoViewComponent implements OnInit {
       },
       complete: () => console.info('complete')
     });
+  }
+
+  get system() {
+    return this.searchForm.get('system');
   }
 
   openSnackBar(message: string) {

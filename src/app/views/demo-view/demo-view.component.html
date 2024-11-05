@@ -5,7 +5,7 @@
   <p *ngIf="errorMessage">{{ errorMessage }}</p>
   <div class="title-underline mb-4"></div>
 
-  <form class="form">
+  <form class="form" [formGroup]="searchForm">
     <div class="container-fluid">
       <div class="row">
         <div class="col-2">
@@ -24,12 +24,18 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <mat-form-field>
+          <mat-form-field class="form-group">
             <mat-label>System</mat-label>
-            <input matInput value="MockA">
+            <input matInput id="system" formControlName="system">
             <button matSuffix mat-icon-button aria-label="Suchen" (click)="openSnackBar('Suchen Button clicked - 1')">
               <mat-icon>search</mat-icon>
             </button>
+            <mat-error *ngIf="system?.hasError('maxlength') && system?.touched">
+              System - maximale Länge 30 Zeichen erlaubt
+            </mat-error>
+            <mat-error *ngIf="system?.hasError('alphanumericWithSpace') && system?.touched">
+              System - nur Buchstaben, Zahlen und Leerzeichen erlaubt
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="col-2">
@@ -56,25 +62,29 @@
           </mat-form-field>
         </div>
         <div class="col-2 mt-3">
-          <button mat-flat-button (click)="openSnackBar('Suchen Button clicked - 2')">Suchen</button>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col">
-          <ngx-datatable class="material"
-                         [rows]="rows"
-                         [loadingIndicator]="loadingIndicator"
-                         [columns]="columns"
-                         [headerHeight]="40"
-                         [summaryRow]="false"
-                         [summaryPosition]="'bottom'"
-                         [footerHeight]="40"
-                         [limit]="30"
-                         rowHeight="auto"
-                         columnMode="force"
-                         [reorderable]="true"></ngx-datatable>
+          <button mat-flat-button (click)="openSnackBar('Suchen Button clicked - 2')" type="submit" [disabled]="searchForm.invalid">Suchen</button>
         </div>
       </div>
     </div>
   </form>
+
+  <div class="container-fluid">
+    <div class="row mt-5">
+      <div class="col">
+        <ngx-datatable class="material"
+                       [rows]="rows"
+                       [loadingIndicator]="loadingIndicator"
+                       [columns]="columns"
+                       [headerHeight]="40"
+                       [summaryRow]="false"
+                       [summaryPosition]="'bottom'"
+                       [footerHeight]="40"
+                       [limit]="30"
+                       rowHeight="auto"
+                       columnMode="force"
+                       [reorderable]="true"></ngx-datatable>
+      </div>
+    </div>
+  </div>
+
 </div>

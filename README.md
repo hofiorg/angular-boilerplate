@@ -9,10 +9,11 @@ State Handling: ngrx - https://ngrx.io/
 
 Components: Angular Material - https://material.angular.io/components/categories
 
-Table-Component: ngrx-datatable - http://swimlane.github.io/ngx-datatable/
+Table-Component: ngx-datatable - http://swimlane.github.io/ngx-datatable/
 
 Server: Spring Boot (Rest + JSON) - https://spring.io/projects/spring-boot
 
+OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 Additional Information:
 CSS-Zoom - https://www.w3schools.com/cssref/playdemo.php?filename=playcss_zoom
@@ -26,7 +27,7 @@ nvm install lts/iron
 nvm use lts/iron
 ```
 
-### Install angular
+### Install angular command line interface (cli)
 
 ```sh
 npm install -g @angular/cli
@@ -35,6 +36,26 @@ npm install -g @angular/cli
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 ## Steps to reproduce
 
@@ -76,7 +97,7 @@ ng add @angular/material
 npm install bootstrap --save
 ```
 
-### Date adapter for localized dates 
+### Date adapter for localized dates
 
 ```sh
 ng add @angular/material-date-fns-adapter
@@ -87,25 +108,3 @@ ng add @angular/material-date-fns-adapter
 ```sh
 npm install @swimlane/ngx-datatable
 ```
-
-# Geneated Readme (remove later)
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
