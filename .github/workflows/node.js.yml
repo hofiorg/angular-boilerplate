@@ -3,10 +3,6 @@
 
 name: Node.js CI
 
-defaults:
-  run:
-    working-directory: src/main/js
-
 on:
   push:
     branches: [ "main" ]
@@ -30,6 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      working-directory: src/main/js
     - run: npm ci
+      working-directory: src/main/js
     - run: npm run build
+      working-directory: src/main/js
     - run: npm test
+      working-directory: src/main/js
