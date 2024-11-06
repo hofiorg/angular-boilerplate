@@ -34,7 +34,10 @@
               "./node_modules/@swimlane/ngx-datatable/assets/icons.css",
               "./node_modules/@swimlane/ngx-datatable/themes/material.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "moment"
+            ]
           },
           "configurations": {
             "production": {
