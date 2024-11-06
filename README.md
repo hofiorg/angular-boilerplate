@@ -22,8 +22,7 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 - tests for store and services
 - details view
-- spring boot server to serve JSON data
-- build pipeline for GitHub
+- spring boot server to serve JSON data (+ action in GitHub)
 - more validators with regular expressions
 - data pipes for tables and detail-displays
 - header with logo
