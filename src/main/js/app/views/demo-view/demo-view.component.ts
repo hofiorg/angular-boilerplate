@@ -5,6 +5,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {alphanumericWithSpaceValidator} from '../../validators/alphanumeric-with-space.validator';
 import {DemoFacade} from '../../store/demo/demo.facade';
 import {Demo} from '../../model/demo.model';
+import {dateRangeValidator} from '../../validators/date-range.validator';
 
 @Component({
   selector: 'app-demo-view',
@@ -19,9 +20,6 @@ export class DemoViewComponent implements OnInit {
 
   searchForm!: FormGroup;
 
-  data = {
-    system: 'MockA'
-  };
   demoList: Demo[] = [];
   loading: boolean = true;
 
@@ -29,11 +27,10 @@ export class DemoViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchForm = new FormGroup({
-      system: new FormControl(this.data.system, [
-        alphanumericWithSpaceValidator(),
-        Validators.maxLength(30)
-      ]),
-    });
+      eingangVon: new FormControl('', [Validators.required]),
+      eingangBis: new FormControl('', [Validators.required]),
+      system: new FormControl('', [alphanumericWithSpaceValidator(), Validators.maxLength(30)]),
+    }, [dateRangeValidator('eingangVon', 'eingangBis')]);
 
     this.demoFacade.demoList$
       .subscribe((demoList: Demo[]) => {
@@ -43,6 +40,14 @@ export class DemoViewComponent implements OnInit {
       .subscribe((loading: boolean) => {
         this.loading = loading;
       });
+  }
+
+  get eingangVon() {
+    return this.searchForm.get('eingangVon');
+  }
+
+  get eingangBis() {
+    return this.searchForm.get('eingangBis');
   }
 
   get system() {

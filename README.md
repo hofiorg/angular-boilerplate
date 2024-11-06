@@ -48,25 +48,43 @@ nvm use lts/iron
 npm install -g @angular/cli
 ```
 
+### Scripts directory
+
+`src/main/scripts`
+
+### Install dependencies
+
+```sh
+01_install_fe.sh
+``` 
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `02_start_fe_dev_server.sh` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+```sh
+02_start_fe_dev_server.sh
+``` 
+
+## Running unit tests
+
+Run `03_test_fe.sh` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+```sh
+03_test_fe.sh
+``` 
+
+## Build
+
+Run `04_build_fe.sh` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+```sh
+04_build_fe.sh
+``` 
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
@@ -110,12 +128,6 @@ ng add @angular/material
 
 ```sh
 npm install bootstrap --save
-```
-
-### Date adapter for localized dates
-
-```sh
-ng add @angular/material-date-fns-adapter
 ```
 
 ### Ngx Datatable

@@ -8,16 +8,21 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-4 mt-2">
-          <mat-form-field>
+          <mat-form-field class="form-group">
             <mat-label>Eingang von/bis</mat-label>
             <mat-date-range-input
               [rangePicker]="eingangPicker">
-              <input matStartDate placeholder="Eingang von">
-              <input matEndDate placeholder="Eingang bis">
+              <input matStartDate placeholder="Eingang von" formControlName="eingangVon">
+              <input matEndDate placeholder="Eingang bis" formControlName="eingangBis">
             </mat-date-range-input>
-            <mat-hint>DD.MM.YYYY – DD.MM.YYYY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="eingangPicker"></mat-datepicker-toggle>
             <mat-date-range-picker #eingangPicker></mat-date-range-picker>
+            <mat-error *ngIf="(eingangVon?.hasError('required') && eingangVon?.touched) || (eingangBis?.hasError('required') && eingangBis?.touched)">
+              Eingabe erforderlich.
+            </mat-error>
+            <mat-error *ngIf="searchForm.hasError('dateRangeInvalid')">
+              Das "bis"-Datum darf nicht vor dem "von"-Datum liegen.
+            </mat-error>
           </mat-form-field>
         </div>
       </div>
@@ -25,7 +30,7 @@
         <div class="col-2">
           <mat-form-field class="form-group">
             <mat-label>System</mat-label>
-            <input matInput id="system" formControlName="system">
+            <input matInput formControlName="system">
             <button matSuffix mat-icon-button aria-label="Suchen" (click)="openSnackBar('Suchen Button clicked - 1')">
               <mat-icon>search</mat-icon>
             </button>
