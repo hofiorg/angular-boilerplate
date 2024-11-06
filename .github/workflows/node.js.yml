@@ -19,6 +19,10 @@ jobs:
         node-version: [18.x, 20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
+    defaults:
+      run:
+        working-directory: src/main/js
+
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
@@ -26,10 +30,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      working-directory: src/main/js
     - run: npm ci
-      working-directory: src/main/js
     - run: npm run build
-      working-directory: src/main/js
     - run: npm test
-      working-directory: src/main/js
