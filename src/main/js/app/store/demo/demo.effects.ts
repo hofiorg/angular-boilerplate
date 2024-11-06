@@ -20,15 +20,14 @@ export class DemoEffects {
   search$: Observable<Action> = createEffect(() => {
       return this.actions$.pipe(
         ofType(DemoActionTypes.SEARCH_DEMOS),
-        mergeMap(() => {
-          return this.service.search().pipe(
+        mergeMap(({filter}) =>
+          this.service.search(filter).pipe(
             map((demoList: Demo[]) => ({
               type: DemoActionTypes.SEARCH_DEMOS_SUCCESS,
               demoList
             })),
             catchError((error) => of({error, type: DemoActionTypes.SEARCH_DEMOS_FAIL}))
-          );
-        })
+          ))
       );
     }
   );

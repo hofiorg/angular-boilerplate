@@ -8,7 +8,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-4 mt-2">
-          <mat-form-field class="form-group">
+          <mat-form-field appearance="outline" class="form-group">
             <mat-label>Eingang von/bis</mat-label>
             <mat-date-range-input
               [rangePicker]="eingangPicker">
@@ -28,7 +28,7 @@
       </div>
       <div class="row mt-2">
         <div class="col-2">
-          <mat-form-field class="form-group">
+          <mat-form-field appearance="outline" class="form-group">
             <mat-label>System</mat-label>
             <input matInput formControlName="system">
             <button matSuffix mat-icon-button aria-label="Suchen" (click)="openSnackBar('Suchen Button clicked - 1')">
@@ -43,26 +43,44 @@
           </mat-form-field>
         </div>
         <div class="col-2">
-          <mat-form-field>
+          <mat-form-field appearance="outline" class="form-group">
             <mat-label>Nachrichtentyp</mat-label>
-            <input matInput value="1">
+            <input matInput value="1" formControlName="nachrichtentyp">
             <button matSuffix mat-icon-button aria-label="Info" [matTooltip]="getTooltipText()" matTooltipPosition="right" matTooltipClass="tooltip">
               <mat-icon>info</mat-icon>
             </button>
+            <mat-error *ngIf="nachrichtentyp?.hasError('maxlength') && nachrichtentyp?.touched">
+              Eingabe zu lang
+            </mat-error>
+            <mat-error *ngIf="nachrichtentyp?.hasError('alphanumericWithSpace') && nachrichtentyp?.touched">
+              Fehlerhafte Eingabe
+            </mat-error>
           </mat-form-field>
         </div>
       </div>
       <div class="row mt-2">
         <div class="col-2">
-          <mat-form-field>
+          <mat-form-field appearance="outline" class="form-group">
             <mat-label>Nummer 1</mat-label>
-            <input matInput value="">
+            <input matInput value="1" formControlName="nummer1">
+            <mat-error *ngIf="nummer1?.hasError('maxlength') && nummer1?.touched">
+              Eingabe zu lang
+            </mat-error>
+            <mat-error *ngIf="nummer1?.hasError('alphanumericWithSpace') && nummer1?.touched">
+              Fehlerhafte Eingabe
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="col-2">
-          <mat-form-field>
+          <mat-form-field appearance="outline" class="form-group">
             <mat-label>Nummer 2</mat-label>
-            <input matInput value="">
+            <input matInput value="1" formControlName="nummer2">
+            <mat-error *ngIf="nummer2?.hasError('maxlength') && nummer2?.touched">
+              Eingabe zu lang
+            </mat-error>
+            <mat-error *ngIf="nummer2?.hasError('alphanumericWithSpace') && nummer2?.touched">
+              Fehlerhafte Eingabe
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="col-2 mt-3">
@@ -83,7 +101,7 @@
                        [summaryRow]="false"
                        [summaryPosition]="'bottom'"
                        [footerHeight]="40"
-                       [limit]="30"
+                       [limit]="20"
                        rowHeight="auto"
                        columnMode="force"
                        [reorderable]="true"></ngx-datatable>

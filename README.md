@@ -20,7 +20,6 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 ## TODO
 
-- connect form fields for search
 - tests for store and services
 - details view
 - spring boot server to serve JSON data
@@ -31,7 +30,6 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 - footer?
 - permissions for routing and other ui-actions
 - login with oauth
-- material date range has no leading zeros
 
 ## Installation
 

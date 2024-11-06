@@ -6,6 +6,8 @@ import {alphanumericWithSpaceValidator} from '../../validators/alphanumeric-with
 import {DemoFacade} from '../../store/demo/demo.facade';
 import {Demo} from '../../model/demo.model';
 import {dateRangeValidator} from '../../validators/date-range.validator';
+import {alphanumericValidator} from '../../validators/alphanumeric.validator';
+import {newDateBeginOfDay, newDateEndOfDay} from '../../utils/date-utils';
 
 @Component({
   selector: 'app-demo-view',
@@ -27,9 +29,12 @@ export class DemoViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchForm = new FormGroup({
-      eingangVon: new FormControl('', [Validators.required]),
-      eingangBis: new FormControl('', [Validators.required]),
+      eingangVon: new FormControl(newDateBeginOfDay(), [Validators.required]),
+      eingangBis: new FormControl(newDateEndOfDay(), [Validators.required]),
       system: new FormControl('', [alphanumericWithSpaceValidator(), Validators.maxLength(30)]),
+      nachrichtentyp: new FormControl('', [alphanumericWithSpaceValidator(), Validators.maxLength(30)]),
+      nummer1: new FormControl('', [alphanumericValidator(), Validators.maxLength(20)]),
+      nummer2: new FormControl('', [alphanumericValidator(), Validators.maxLength(20)]),
     }, [dateRangeValidator('eingangVon', 'eingangBis')]);
 
     this.demoFacade.demoList$
@@ -54,6 +59,18 @@ export class DemoViewComponent implements OnInit {
     return this.searchForm.get('system');
   }
 
+  get nachrichtentyp() {
+    return this.searchForm.get('nachrichtentyp');
+  }
+
+  get nummer1() {
+    return this.searchForm.get('nummer1');
+  }
+
+  get nummer2() {
+    return this.searchForm.get('nummer2');
+  }
+
   openSnackBar(message: string) {
     this._snackBar.open(message, undefined, {
       duration: 2000,
@@ -71,12 +88,12 @@ export class DemoViewComponent implements OnInit {
 
   search() {
     this.demoFacade.search({
-      eingangVon: '',
-      eingangBis: '',
-      system: '',
-      nachrichtentyp: '',
-      nummer1: '',
-      nummer2: ''
+      eingangVon: this.eingangVon?.value,
+      eingangBis: this.eingangBis?.value,
+      system: this.system?.value,
+      nachrichtentyp: this.nachrichtentyp?.value,
+      nummer1: this.nummer1?.value,
+      nummer2: this.nummer2?.value
     })
   }
 }

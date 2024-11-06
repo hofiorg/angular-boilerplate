@@ -9,7 +9,7 @@ body {
 div.view {
   margin: 0 auto;
   background: white;
-  width: 1600px;
+  width: 2000px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3);
   min-height: 100%
 }
@@ -17,7 +17,7 @@ div.view {
 div.header {
   margin: 0 auto;
   background-color: #0a2c68;
-  width: 1600px;
+  width: 2000px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3);
   height: 40px;
 }
@@ -31,7 +31,7 @@ h1.title {
 
 div.title-underline {
   background-color: #0a2c68;
-  width: 1600px;
+  width: 2000px;
   height: 4px;
   margin: 0 auto 10px;
 }
