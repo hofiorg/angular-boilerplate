@@ -21,7 +21,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: src/main/js
+        working-directory: ./src/main/js
 
     steps:
     - uses: actions/checkout@v4
