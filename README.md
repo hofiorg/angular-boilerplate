@@ -1,4 +1,4 @@
-# angular-boilerplate
+# angular-boilerplate &middot; ![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml/badge.svg)
 
 Basis Framework: Angular 18 - https://angular.dev/
 
