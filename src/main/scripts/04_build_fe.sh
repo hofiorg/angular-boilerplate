@@ -6,4 +6,4 @@ echo "npm version: $(npm -v)"
 echo "ng version: $(ng --version)"
 echo
 
-ng test --watch=false
+ng build
