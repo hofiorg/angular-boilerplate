@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DemoViewComponent } from './demo-view.component';
+import {DemoViewComponent} from './demo-view.component';
 import {globalTestProviders} from '../../app.component';
 
 describe('DemoViewComponent', () => {

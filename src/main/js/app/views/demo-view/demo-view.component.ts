@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {globalModules, globalProviders} from '../../app.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
@@ -14,18 +14,17 @@ import {newDateBeginOfDay, newDateEndOfDay} from '../../utils/date-utils';
   standalone: true,
   providers: [...globalProviders],
   imports: [...globalModules],
-  templateUrl: './demo-view.component.html',
-  styleUrl: './demo-view.component.css'
+  templateUrl: './demo-view.component.html'
 })
 export class DemoViewComponent implements OnInit {
-  private _snackBar = inject(MatSnackBar);
-
   searchForm!: FormGroup;
 
   demoList: Demo[] = [];
+  columns = [{ name: 'Name' }, { name: 'Gender' }, { name: 'Company' }];
+
   loading: boolean = true;
 
-  constructor(private demoFacade: DemoFacade) {}
+  constructor(private demoFacade: DemoFacade, private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     this.searchForm = new FormGroup({
@@ -72,19 +71,14 @@ export class DemoViewComponent implements OnInit {
   }
 
   openSnackBar(message: string) {
-    this._snackBar.open(message, undefined, {
+    this.snackBar.open(message, undefined, {
       duration: 2000,
     });
   }
 
   getTooltipText() {
-    return `Multi
-    Line
-    Tooltip
-    Example`;
+    return 'Multi\nLine\nTooltip\nExample';
   }
-
-  columns = [{ prop: 'name' }, { name: 'Gender' }, { name: 'Company' }];
 
   search() {
     this.demoFacade.search({
