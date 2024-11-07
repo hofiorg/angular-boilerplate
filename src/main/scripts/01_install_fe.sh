@@ -1,4 +1,4 @@
-cd ../js  || exit
+cd ../js || exit
 
 echo
 echo "node version: $(node -v)"

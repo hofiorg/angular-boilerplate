@@ -1,0 +1,12 @@
+
+POST {{host}}/api/demo/search
+Content-Type: application/json
+
+{
+  "eingangVon": "2024-11-06T23:00:00.000Z",
+  "eingangBis": "2024-11-07T22:59:59.999Z",
+  "system": "",
+  "nachrichtentyp": "",
+  "nummer1": "",
+  "nummer2": ""
+}

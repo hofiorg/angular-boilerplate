@@ -43,3 +43,5 @@ Thumbs.db
 
 # Dist
 src/main/js/dist
+/src/main/resources/public/
+target

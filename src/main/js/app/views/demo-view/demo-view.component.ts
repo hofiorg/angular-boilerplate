@@ -7,7 +7,7 @@ import {DemoFacade} from '../../store/demo/demo.facade';
 import {Demo} from '../../model/demo.model';
 import {dateRangeValidator} from '../../validators/date-range.validator';
 import {alphanumericValidator} from '../../validators/alphanumeric.validator';
-import {newDateBeginOfDay, newDateEndOfDay} from '../../utils/date-utils';
+import {formatDate, newDateBeginOfDay, newDateEndOfDay} from '../../utils/date-utils';
 import {SelectionType} from '@swimlane/ngx-datatable';
 import {NgxDatatableDblClickDirective} from '../../directive/ngx-datatable-doubleclick.directive';
 import {Router} from '@angular/router';
@@ -86,8 +86,8 @@ export class DemoViewComponent implements OnInit {
 
   search() {
     this.demoFacade.search({
-      eingangVon: this.eingangVon?.value,
-      eingangBis: this.eingangBis?.value,
+      eingangVon: formatDate(this.eingangVon?.value),
+      eingangBis: formatDate(this.eingangBis?.value),
       system: this.system?.value,
       nachrichtentyp: this.nachrichtentyp?.value,
       nummer1: this.nummer1?.value,

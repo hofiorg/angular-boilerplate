@@ -20,7 +20,8 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 ## TODO
 
-- spring boot server to serve JSON data (+ action in GitHub)
+- maven action in GitHub
+- test for rest service
 - tests for store and services
 - details view
 - more validators with regular expressions
