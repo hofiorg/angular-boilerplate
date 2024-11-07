@@ -18,7 +18,7 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 - CSS-Zoom - https://www.w3schools.com/cssref/playdemo.php?filename=playcss_zoom
 
-## TODO
+## TODOs
 
 - test for rest service
 - tests for store and services
@@ -31,13 +31,14 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 - login with oauth
   - example
     - <https://www.baeldung.com/rest-api-spring-oauth2-angular>
-- table filter for all columns
+- table filter for columns
 - table actions for edit/delete/etc.
 - website-navigation
   - examples 
     - <https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l>
     - <https://medium.com/@ahmedaabouzied/angular-material-responsive-navigation-53b573305d3d>
     - <https://medium.com/@vperviz/create-an-angular-app-with-a-side-navigation-and-a-dashboard-in-5-minutes-with-schematics-300fc3b8e0a8>
+- production build for maven
 
 ## Installation
 
