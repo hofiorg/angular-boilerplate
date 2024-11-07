@@ -93,7 +93,7 @@
   <div class="container-fluid">
     <div class="row mt-5">
       <div class="col">
-        <ngx-datatable class="material"
+        <ngx-datatable class="material striped"
                        [rows]="demoList"
                        [loadingIndicator]="loading"
                        [columns]="columns"
@@ -102,6 +102,7 @@
                        [summaryPosition]="'bottom'"
                        [footerHeight]="40"
                        [limit]="20"
+                       [selectionType]="SelectionType.single"
                        rowHeight="auto"
                        columnMode="force"
                        [reorderable]="true"></ngx-datatable>

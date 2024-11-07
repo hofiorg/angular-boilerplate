@@ -8,6 +8,7 @@ import {Demo} from '../../model/demo.model';
 import {dateRangeValidator} from '../../validators/date-range.validator';
 import {alphanumericValidator} from '../../validators/alphanumeric.validator';
 import {newDateBeginOfDay, newDateEndOfDay} from '../../utils/date-utils';
+import {SelectionType} from '@swimlane/ngx-datatable';
 
 @Component({
   selector: 'app-demo-view',
@@ -90,4 +91,6 @@ export class DemoViewComponent implements OnInit {
       nummer2: this.nummer2?.value
     })
   }
+
+  protected readonly SelectionType = SelectionType;
 }

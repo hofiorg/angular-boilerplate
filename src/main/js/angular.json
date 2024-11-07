@@ -32,7 +32,8 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/@swimlane/ngx-datatable/index.scss",
               "./node_modules/@swimlane/ngx-datatable/assets/icons.css",
-              "./node_modules/@swimlane/ngx-datatable/themes/material.scss"
+              "./node_modules/@swimlane/ngx-datatable/themes/material.scss",
+              "app/theme.scss"
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [

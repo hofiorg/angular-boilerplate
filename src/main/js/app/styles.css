@@ -16,7 +16,7 @@ div.view {
 
 div.header {
   margin: 0 auto;
-  background-color: #0a2c68;
+  background-color: #003a7a;
   width: 2000px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, .3);
   height: 40px;
@@ -30,7 +30,7 @@ h1.title {
 }
 
 div.title-underline {
-  background-color: #0a2c68;
+  background-color: #003a7a;
   width: 2000px;
   height: 4px;
   margin: 0 auto 10px;
@@ -53,3 +53,10 @@ ngx-datatable {
   top: 52px;
 }
 
+.datatable-body-row.active .datatable-row-group {
+  background-color: #abc7ff !important;
+}
+
+.datatable-body-row.active .datatable-body-cell {
+  color: #000000 !important;
+}

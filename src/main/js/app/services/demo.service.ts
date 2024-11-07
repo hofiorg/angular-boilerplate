@@ -22,7 +22,7 @@ export class DemoService {
       items.push({ name: "Name " + i, gender: "Gender " + i, company: "Company " + i });
     }
     // simulate 5 seconds delay
-    return timer(5000).pipe(
+    return timer(2000).pipe(
       map(() => [
         ...items
       ])

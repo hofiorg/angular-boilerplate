@@ -20,15 +20,24 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 ## TODO
 
+- spring boot server to serve JSON data (+ action in GitHub)
 - tests for store and services
 - details view
-- spring boot server to serve JSON data (+ action in GitHub)
 - more validators with regular expressions
 - data pipes for tables and detail-displays
 - header with logo
-- footer?
+- website-footer
 - permissions for routing and other ui-actions
 - login with oauth
+  - example
+    - <https://www.baeldung.com/rest-api-spring-oauth2-angular>
+- table filter for all columns
+- table actions for edit/delete/etc.
+- website-navigation
+  - examples 
+    - <https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l>
+    - <https://medium.com/@ahmedaabouzied/angular-material-responsive-navigation-53b573305d3d>
+    - <https://medium.com/@vperviz/create-an-angular-app-with-a-side-navigation-and-a-dashboard-in-5-minutes-with-schematics-300fc3b8e0a8>
 
 ## Installation
 
