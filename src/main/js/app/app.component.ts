@@ -14,6 +14,7 @@ import {provideHttpClient, withFetch} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
 import {provideMockStore} from '@ngrx/store/testing';
 import {provideGermanDate} from './providers/german-date.provider';
+import {NgxDatatableDblClickDirective} from './directive/ngx-datatable-doubleclick.directive';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ import {provideGermanDate} from './providers/german-date.provider';
   providers: [
     provideGermanDate()
   ],
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NgxDatatableDblClickDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

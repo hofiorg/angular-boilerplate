@@ -21,8 +21,10 @@ export class DemoService {
     for (let i = 0; i < 1000; i++) {
       items.push({ name: "Name " + i, gender: "Gender " + i, company: "Company " + i });
     }
-    // simulate 5 seconds delay
-    return timer(2000).pipe(
+    // simulate x seconds delay
+    const timeout = 0;
+
+    return timer(timeout).pipe(
       map(() => [
         ...items
       ])

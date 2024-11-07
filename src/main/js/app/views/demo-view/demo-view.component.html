@@ -1,12 +1,12 @@
 <div class="view">
   <div class="header"></div>
-
-  <h1 class="title">Demo View</h1>
-  <div class="title-underline mb-2"></div>
-
   <form class="form" [formGroup]="searchForm">
     <div class="container-fluid">
-      <div class="row">
+
+      <h1 class="title">Demo View</h1>
+      <div class="title-underline mb-2"></div>
+
+      <div class="row mt-4">
         <div class="col-4 mt-2">
           <mat-form-field appearance="outline" class="form-group">
             <mat-label>Eingang von/bis</mat-label>
@@ -105,7 +105,9 @@
                        [selectionType]="SelectionType.single"
                        rowHeight="auto"
                        columnMode="force"
-                       [reorderable]="true"></ngx-datatable>
+                       [reorderable]="true"
+                       [selected]="selected"
+                       (onDblClick)="onDblClick()"></ngx-datatable>
       </div>
     </div>
   </div>

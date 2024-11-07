@@ -9,12 +9,14 @@ import {dateRangeValidator} from '../../validators/date-range.validator';
 import {alphanumericValidator} from '../../validators/alphanumeric.validator';
 import {newDateBeginOfDay, newDateEndOfDay} from '../../utils/date-utils';
 import {SelectionType} from '@swimlane/ngx-datatable';
+import {NgxDatatableDblClickDirective} from '../../directive/ngx-datatable-doubleclick.directive';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-demo-view',
+  selector: 'demo-view',
   standalone: true,
   providers: [...globalProviders],
-  imports: [...globalModules],
+  imports: [...globalModules, NgxDatatableDblClickDirective],
   templateUrl: './demo-view.component.html'
 })
 export class DemoViewComponent implements OnInit {
@@ -22,10 +24,11 @@ export class DemoViewComponent implements OnInit {
 
   demoList: Demo[] = [];
   columns = [{ name: 'Name' }, { name: 'Gender' }, { name: 'Company' }];
+  selected = [];
 
   loading: boolean = true;
 
-  constructor(private demoFacade: DemoFacade, private snackBar: MatSnackBar) {}
+  constructor(private demoFacade: DemoFacade, private snackBar: MatSnackBar, private router: Router) {}
 
   ngOnInit(): void {
     this.searchForm = new FormGroup({
@@ -93,4 +96,8 @@ export class DemoViewComponent implements OnInit {
   }
 
   protected readonly SelectionType = SelectionType;
+
+  onDblClick() {
+    this.router.navigate(['demo-details-view']).then();
+  }
 }
