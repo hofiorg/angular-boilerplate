@@ -1,4 +1,4 @@
-# angular-boilerplate &middot; ![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml/badge.svg)
+# angular-boilerplate &middot; ![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml/badge.svg) ![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml/badge.svg)
 
 Basis Framework: Angular 18 - https://angular.dev/
 
@@ -20,7 +20,6 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 ## TODO
 
-- maven action in GitHub
 - test for rest service
 - tests for store and services
 - details view
