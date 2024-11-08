@@ -20,8 +20,8 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 
 ## TODOs
 
-- test for rest service
 - tests for store and services
+- error handling
 - details view
 - more validators with regular expressions
 - data pipes for tables and detail-displays
@@ -32,6 +32,8 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
   - example
     - <https://www.baeldung.com/rest-api-spring-oauth2-angular>
 - table filter for columns
+  - example
+    - <https://www.w3schools.com/howto/howto_js_filter_table.asp>
 - table actions for edit/delete/etc.
 - website-navigation
   - examples 

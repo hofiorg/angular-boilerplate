@@ -11,18 +11,23 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.5</version>
+    <version>3.3.5</version> <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
   </parent>
 
   <properties>
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>dd.MM.yyyy HH:mm:ss</maven.build.timestamp.format>
+    <junit.version>5.10.5</junit.version> <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -55,6 +60,18 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.2</version> <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+        <dependencies>
+          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+          </dependency>
+        </dependencies>
       </plugin>
     </plugins>
   </build>
