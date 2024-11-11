@@ -2,14 +2,14 @@
 
 ## Technologies Overview 🚀
 
-| Technology                | Purpose         | Documentation                                                 |
-|---------------------------|-----------------|---------------------------------------------------------------|
-| Angular 18                | Base Framework  | <https://angular.dev/>                                        |
-| Bootstrap v5.3            | Grid System     | <https://getbootstrap.com/docs/5.3/layout/grid/#how-it-works> |
-| NgRx                      | State Handling  | <https://ngrx.io/>                                            |
-| Angular Material          | Components      | <https://material.angular.io/components/categories>           |
-| ngx-datatable             | Table Component | <http://swimlane.github.io/ngx-datatable/>                    |
-| Spring Boot (Rest + JSON) | Server          | <https://spring.io/projects/spring-boot>                      |
+| Technology                    | Purpose         | Documentation                                                 |
+|:------------------------------|:----------------|:--------------------------------------------------------------|
+| Angular 18                    | Base Framework  | <https://angular.dev/>                                        |
+| Bootstrap v5.3                | Grid System     | <https://getbootstrap.com/docs/5.3/layout/grid/#how-it-works> |
+| NgRx                          | State Handling  | <https://ngrx.io/>                                            |
+| Angular Material              | Components      | <https://material.angular.io/components/categories>           |
+| ngx-datatable                 | Table Component | <http://swimlane.github.io/ngx-datatable/>                    |
+| Spring Boot<br/>(Rest + JSON) | Server          | <https://spring.io/projects/spring-boot>                      |
 
 ## TODOs
 
