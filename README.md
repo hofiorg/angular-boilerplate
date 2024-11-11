@@ -85,10 +85,10 @@ Run `03_test_fe.sh` to execute the unit tests via [Karma](https://karma-runner.g
 
 ## Build
 
-Run `04_build_fe.sh` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `20_build.sh` to build the project. The build artifacts will be stored in the `target/` directory.
 
 ```sh
-04_build_fe.sh
+20_build.sh
 ``` 
 
 ## Code scaffolding
