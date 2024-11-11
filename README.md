@@ -12,12 +12,6 @@ Table-Component: ngx-datatable - http://swimlane.github.io/ngx-datatable/
 
 Server: Spring Boot (Rest + JSON) - https://spring.io/projects/spring-boot
 
-OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
-
-**Additional Information**
-
-- CSS-Zoom - https://www.w3schools.com/cssref/playdemo.php?filename=playcss_zoom
-
 ## TODOs
 
 - tests for store and services
@@ -31,6 +25,7 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 - login with oauth
   - example
     - <https://www.baeldung.com/rest-api-spring-oauth2-angular>
+    - OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
 - table filter for columns
   - example
     - <https://www.w3schools.com/howto/howto_js_filter_table.asp>
@@ -40,7 +35,7 @@ OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
     - <https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l>
     - <https://medium.com/@ahmedaabouzied/angular-material-responsive-navigation-53b573305d3d>
     - <https://medium.com/@vperviz/create-an-angular-app-with-a-side-navigation-and-a-dashboard-in-5-minutes-with-schematics-300fc3b8e0a8>
-- production build for maven
+- routing with ids for detail views
 
 ## Installation
 
@@ -59,9 +54,12 @@ npm install -g @angular/cli
 
 ### Scripts directory
 
+All development scripts can be found under
 `src/main/scripts`
 
 ### Install dependencies
+
+Run `01_install_fe.sh` to install the javascript project. This runs npm install.
 
 ```sh
 01_install_fe.sh
@@ -69,7 +67,7 @@ npm install -g @angular/cli
 
 ## Development server
 
-Run `02_start_fe_dev_server.sh` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `02_start_fe_dev_server.sh` for a frontend dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ```sh
 02_start_fe_dev_server.sh
@@ -77,10 +75,26 @@ Run `02_start_fe_dev_server.sh` for a dev server. Navigate to `http://localhost:
 
 ## Running unit tests
 
-Run `03_test_fe.sh` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `03_test_fe.sh` to execute the frontend unit tests via [Karma](https://karma-runner.github.io).
 
 ```sh
 03_test_fe.sh
+``` 
+
+## Install Server
+
+Run `10_install_server.sh` to install the server project. This runs mvn clean install.
+
+```sh
+10_install_server
+``` 
+
+## Test Server
+
+Run `11_test_server.sh` to test the server project. This runs mvn test.
+
+```sh
+10_install_server
 ``` 
 
 ## Build
@@ -89,6 +103,14 @@ Run `20_build.sh` to build the project. The build artifacts will be stored in th
 
 ```sh
 20_build.sh
+``` 
+
+## Start
+
+Run `30_start_server.sh` to start the spring-boot server with java.
+
+```sh
+30_start_server.sh
 ``` 
 
 ## Code scaffolding

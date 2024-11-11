@@ -98,6 +98,6 @@ export class DemoViewComponent implements OnInit {
   protected readonly SelectionType = SelectionType;
 
   onDblClick() {
-    this.router.navigate(['demo-details-view']).then();
+    this.router.navigate(['view/demo-details']).then();
   }
 }

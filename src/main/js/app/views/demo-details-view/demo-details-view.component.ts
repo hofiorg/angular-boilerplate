@@ -17,6 +17,6 @@ export class DemoDetailsViewComponent implements OnInit {
   }
 
   back() {
-    this.router.navigate(['demo-view']).then();
+    this.router.navigate(['view/demo']).then();
   }
 }
