@@ -1,6 +1,6 @@
 # angular-boilerplate &middot; <a href="https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml">![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml/badge.svg)</a> <a href="https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml">![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml/badge.svg)</a>
 
-Basis Framework: Angular 18 - https://angular.dev/
+Base Framework: Angular 18 - https://angular.dev/
 
 Grid System: Bootstrap v5.3 - https://getbootstrap.com/docs/5.3/layout/grid/#how-it-works
 
