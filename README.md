@@ -26,6 +26,23 @@ nvm use lts/iron
 npm install -g @angular/cli
 ```
 
+### Install Java
+
+#### Installation with Homebrew (MacOS)
+
+```sh
+brew install openjdk
+sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+```
+
+### Install Maven
+
+#### Installation with Homebrew (MacOS)
+
+```sh
+brew install maven
+```
+
 ### Scripts directory
 
 All development scripts can be found under
@@ -37,7 +54,7 @@ Run `01_install_fe.sh` to install the JavaScript project. This runs `npm install
 
 ```sh
 01_install_fe.sh
-``` 
+```
 
 ## Development server
 
@@ -45,7 +62,7 @@ Run `02_start_fe_dev_server.sh` for a frontend development server. Navigate to `
 
 ```sh
 02_start_fe_dev_server.sh
-``` 
+```
 
 ## Running unit tests
 
@@ -53,7 +70,7 @@ Run `03_test_fe.sh` to execute the frontend unit tests via [Karma](https://karma
 
 ```sh
 03_test_fe.sh
-``` 
+```
 
 ## Install Server
 
@@ -61,7 +78,7 @@ Run `10_install_server.sh` to install the server project. This runs `mvn clean i
 
 ```sh
 10_install_server.sh
-``` 
+```
 
 ## Test Server
 
@@ -69,7 +86,7 @@ Run `11_test_server.sh` to test the server project. This runs `mvn test`.
 
 ```sh
 11_test_server.sh
-``` 
+```
 
 ## Build
 
@@ -77,7 +94,7 @@ Run `20_build.sh` to build the project. The build artifacts will be stored in th
 
 ```sh
 20_build.sh
-``` 
+```
 
 ## Start
 
@@ -85,7 +102,15 @@ Run `30_start_server.sh` to start the Spring Boot server with Java.
 
 ```sh
 30_start_server.sh
-``` 
+```
+
+## Open in Chrome
+
+Run `40_open_chrome.sh` to start Chrome.
+
+```sh
+40_open_chrome.sh
+```
 
 ## Code scaffolding
 
@@ -161,15 +186,14 @@ ng add @ngrx/effects@latest
 - Login with OAuth
   - Example:
     - <https://www.baeldung.com/rest-api-spring-oauth2-angular>
-    - OAuth - https://github.com/manfredsteyer/angular-oauth2-oidc
+    - OAuth - <https://github.com/manfredsteyer/angular-oauth2-oidc>
 - Table filter for columns
   - Example:
     - <https://www.w3schools.com/howto/howto_js_filter_table.asp>
 - Table actions for edit/delete/etc.
 - Website navigation
-  - Examples: 
+  - Examples:
     - <https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l>
     - <https://medium.com/@ahmedaabouzied/angular-material-responsive-navigation-53b573305d3d>
     - <https://medium.com/@vperviz/create-an-angular-app-with-a-side-navigation-and-a-dashboard-in-5-minutes-with-schematics-300fc3b8e0a8>
 - Routing with IDs for detail views
-  
