@@ -16,8 +16,9 @@
 ### Install node/npm
 
 ```sh
-nvm install lts/iron
-nvm use lts/iron
+nvm install lts/jod
+nvm use lts/jod
+nvm alias default lts/jod
 ```
 
 ### Install Angular Command Line Interface (CLI)
