@@ -198,3 +198,4 @@ ng add @ngrx/effects@latest
     - <https://medium.com/@ahmedaabouzied/angular-material-responsive-navigation-53b573305d3d>
     - <https://medium.com/@vperviz/create-an-angular-app-with-a-side-navigation-and-a-dashboard-in-5-minutes-with-schematics-300fc3b8e0a8>
 - Routing with IDs for detail views
+- Build different customers (with different stylesheets)

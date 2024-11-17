@@ -15,6 +15,7 @@ import {provideAnimations} from '@angular/platform-browser/animations';
 import {provideMockStore} from '@ngrx/store/testing';
 import {provideGermanDate} from './providers/german-date.provider';
 import {NgxDatatableDblClickDirective} from './directive/ngx-datatable-doubleclick.directive';
+import {FootnoteComponent} from './component/footer/footnote.component';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,7 @@ export class AppComponent {
   }
 }
 
-export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, MatButtonModule, MatTooltip, NgxDatatableModule, ReactiveFormsModule];
+export const globalModules = [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatIconModule, MatButtonModule, MatTooltip, NgxDatatableModule, ReactiveFormsModule, FootnoteComponent];
 export const globalProviders = [];
 
 export const globalTestProviders = [
