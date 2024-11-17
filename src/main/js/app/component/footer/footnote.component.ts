@@ -16,6 +16,7 @@ export class FootnoteComponent implements OnInit {
   timestamp: string | undefined;
   customer: string | undefined;
   currentYear = new Date().getFullYear();
+  applicationName = 'angular-boilerplate'
   companyName = 'hofi.org'
 
   constructor(private meta: Meta) {
@@ -31,7 +32,7 @@ export class FootnoteComponent implements OnInit {
 
     if (!FootnoteComponent.hasLogged && this.version !== undefined) {
       console.info(
-        `© ${this.currentYear} ⋅ ${this.companyName} ⋅ Build-version: ${this.version} ⋅ Build-timestamp: ${this.timestamp} ⋅ Customer: ${this.customer}`
+        `${this.applicationName} © ${this.currentYear} ⋅ ${this.companyName} ⋅ Build-version: ${this.version} ⋅ Build-timestamp: ${this.timestamp} ⋅ Customer: ${this.customer}`
       );
       FootnoteComponent.hasLogged = true; // Set the flag to true after logging
     }
