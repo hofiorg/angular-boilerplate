@@ -2,7 +2,7 @@ import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, NativeDateAdapter} from 
 import {Provider} from '@angular/core';
 import moment from 'moment';
 
-class GermanDateAdapter extends NativeDateAdapter {
+export class GermanDateAdapter extends NativeDateAdapter {
   override parse(value: any): Date | null {
     if (typeof value === 'string' && value.indexOf('.') > -1) {
       const parsedDate = moment(value, 'DD.MM.YYYY', true);
