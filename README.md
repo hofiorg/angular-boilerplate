@@ -176,6 +176,7 @@ ng add @ngrx/effects@latest
 
 ## TODO List
 
+- Upgrade to Angular 20
 - Tests for store and services
 - Error handling
 - Details view
