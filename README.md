@@ -4,7 +4,7 @@
 
 | Technology                    | Purpose         | Documentation                                                 |
 |:------------------------------|:----------------|:--------------------------------------------------------------|
-| Angular 18                    | Base Framework  | <https://angular.dev/>                                        |
+| Angular 19                    | Base Framework  | <https://angular.dev/>                                        |
 | Bootstrap v5.3                | Grid System     | <https://getbootstrap.com/docs/5.3/layout/grid/#how-it-works> |
 | NgRx                          | State Handling  | <https://ngrx.io/>                                            |
 | Angular Material              | Components      | <https://material.angular.io/components/categories>           |
@@ -176,7 +176,6 @@ ng add @ngrx/effects@latest
 
 ## TODO List
 
-- Upgrade to Angular 20
 - Tests for store and services
 - Error handling
 - Details view
