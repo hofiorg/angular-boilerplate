@@ -14,7 +14,6 @@ import {provideHttpClient, withFetch} from '@angular/common/http';
 import {provideAnimations} from '@angular/platform-browser/animations';
 import {provideMockStore} from '@ngrx/store/testing';
 import {provideGermanDate} from './providers/german-date.provider';
-import {NgxDatatableDblClickDirective} from './directive/ngx-datatable-doubleclick.directive';
 import {FootnoteComponent} from './component/footer/footnote.component';
 
 @Component({
@@ -22,7 +21,7 @@ import {FootnoteComponent} from './component/footer/footnote.component';
     providers: [
         provideGermanDate()
     ],
-    imports: [RouterOutlet, NgxDatatableDblClickDirective],
+    imports: [RouterOutlet],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
