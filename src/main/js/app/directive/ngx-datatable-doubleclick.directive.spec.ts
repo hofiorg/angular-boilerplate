@@ -5,12 +5,13 @@ import {NgxDatatableDblClickDirective} from './ngx-datatable-doubleclick.directi
 import {Model} from '@swimlane/ngx-datatable';
 
 @Component({
-  template: `
+    template: `
     <div
       onDblClick
       (onDblClick)="onRowDblClick($event)">
     </div>
   `,
+    standalone: false
 })
 class TestComponent {
   onRowDblClick = jasmine.createSpy('onRowDblClick');

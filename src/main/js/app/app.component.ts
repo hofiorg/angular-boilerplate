@@ -18,14 +18,13 @@ import {NgxDatatableDblClickDirective} from './directive/ngx-datatable-doublecli
 import {FootnoteComponent} from './component/footer/footnote.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  providers: [
-    provideGermanDate()
-  ],
-  imports: [RouterOutlet, NgxDatatableDblClickDirective],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    providers: [
+        provideGermanDate()
+    ],
+    imports: [RouterOutlet, NgxDatatableDblClickDirective],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'angular-boilerplate';

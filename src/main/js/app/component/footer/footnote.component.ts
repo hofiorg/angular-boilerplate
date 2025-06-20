@@ -3,12 +3,11 @@ import {Meta} from '@angular/platform-browser';
 
 @Component({
     selector: 'footnote',
-    standalone: true,
     providers: [],
     imports: [],
     templateUrl: './footnote.component.html',
     styleUrl: './footnote.component.css'
-  })
+})
 export class FootnoteComponent implements OnInit {
   private static hasLogged = false;
 

@@ -13,11 +13,10 @@ import {NgxDatatableDblClickDirective} from '../../directive/ngx-datatable-doubl
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'demo-view',
-  standalone: true,
-  providers: [...globalProviders],
-  imports: [...globalModules, NgxDatatableDblClickDirective],
-  templateUrl: './demo-view.component.html'
+    selector: 'demo-view',
+    providers: [...globalProviders],
+    imports: [...globalModules, NgxDatatableDblClickDirective],
+    templateUrl: './demo-view.component.html'
 })
 export class DemoViewComponent implements OnInit {
   searchForm!: FormGroup;
