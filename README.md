@@ -19,7 +19,7 @@
 | NgRx                          | State Handling  | <https://ngrx.io/>                                            |
 | Angular Material              | Components      | <https://material.angular.io/components/categories>           |
 | ngx-datatable                 | Table Component | <http://swimlane.github.io/ngx-datatable/>                    |
-| Spring Boot (REST + JSON)     | Server          | <https://spring.io/projects/spring-boot>                      |
+| Spring Boot<br/>(REST + JSON)   | Server          | <https://spring.io/projects/spring-boot>                      |
 
 ### 📖 Project Description
 
