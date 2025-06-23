@@ -1,9 +1,9 @@
 # angular-boilerplate
 
 [![Angular](https://img.shields.io/badge/Angular-19.2.14-red?logo=angular&logoColor=white)](https://angular.io/)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-blue?logo=bootstrap&logoColor=white)
-![NgRx](https://img.shields.io/badge/NgRx-19.2.1-purple?logo=redux&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.5-green?logo=spring&logoColor=white)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-blue?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![NgRx](https://img.shields.io/badge/NgRx-19.2.1-purple?logo=redux&logoColor=white)](https://ngrx.io/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.5-green?logo=spring&logoColor=white)](https://spring.io/projects/spring-boot)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 [![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml)
 [![maven workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml/badge.svg)](https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml)
