@@ -1,6 +1,16 @@
-# angular-boilerplate &middot; <a href="https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml">![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml/badge.svg)</a> <a href="https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml">![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml/badge.svg)</a>
+# angular-boilerplate
 
-## Technologies Overview 🚀
+[![Angular](https://img.shields.io/badge/Angular-19.2.14-red?logo=angular&logoColor=white)](https://angular.io/)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-blue?logo=bootstrap&logoColor=white)
+![NgRx](https://img.shields.io/badge/NgRx-19.2.1-purple?logo=redux&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.5-green?logo=spring&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
+[![node_js workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/hofiorg/angular-boilerplate/actions/workflows/node.js.yml)
+[![maven workflow](https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml/badge.svg)](https://github.com/hofiorg/angular-boilerplate/actions/workflows/maven.yml)
+
+## 📋 Overview
+
+### 🔧 Technologies Used
 
 | Technology                    | Purpose         | Documentation                                                 |
 |:------------------------------|:----------------|:--------------------------------------------------------------|
@@ -9,11 +19,23 @@
 | NgRx                          | State Handling  | <https://ngrx.io/>                                            |
 | Angular Material              | Components      | <https://material.angular.io/components/categories>           |
 | ngx-datatable                 | Table Component | <http://swimlane.github.io/ngx-datatable/>                    |
-| Spring Boot<br/>(REST + JSON) | Server          | <https://spring.io/projects/spring-boot>                      |
+| Spring Boot (REST + JSON)     | Server          | <https://spring.io/projects/spring-boot>                      |
 
-## Installation
+### 📖 Project Description
 
-### Install node/npm
+A boilerplate for modern web apps using Angular 19 with Bootstrap, Angular Material, and NgRx for responsive, stateful UIs. Back-end is powered by Spring Boot with a RESTful JSON API. Features include modular architecture and advanced table handling with ngx-datatable.
+
+## 🚦 Getting Started
+
+### 🛠️ Prerequisites
+
+- Node.js / npm (or nvm instructions)
+- Java (JDK)
+- Maven
+
+### 📥 Installation
+
+#### Install node/npm
 
 ```sh
 nvm install lts/jod
@@ -21,181 +43,121 @@ nvm use lts/jod
 nvm alias default lts/jod
 ```
 
-### Install Angular Command Line Interface (CLI)
+#### Install Angular Command Line Interface (CLI)
 
 ```sh
 npm install -g @angular/cli
 ```
 
-### Install Java
+#### Install Java
 
-#### Installation with Homebrew (MacOS)
+##### Install Java with Homebrew (MacOS)
 
 ```sh
 brew install openjdk
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 ```
 
-### Install Maven
+#### Install Maven
 
-#### Installation with Homebrew (MacOS)
+##### Install Maven with Homebrew (MacOS)
 
 ```sh
 brew install maven
 ```
 
-### Scripts directory
+## 🚀 Development
 
-All development scripts can be found under
-`src/main/scripts`.
+### 🖥️ Frontend
 
-### Install dependencies
+#### Installing the Project Dependencies
 
-Run `01_install_fe.sh` to install the JavaScript project. This runs `npm install`.
+Run `01_install_fe.sh` to install the frontend dependencies (via `npm install`).
 
 ```sh
+cd src/main/scripts
 01_install_fe.sh
 ```
 
-## Development server
+#### Running the Dev Server
 
 Run `02_start_fe_dev_server.sh` for a frontend development server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ```sh
+cd src/main/scripts
 02_start_fe_dev_server.sh
 ```
 
-## Running unit tests
+#### Running Unit Tests
 
 Run `03_test_fe.sh` to execute the frontend unit tests via [Karma](https://karma-runner.github.io).
 
 ```sh
+cd src/main/scripts
 03_test_fe.sh
 ```
 
-## Install Server
+### 🗄️ Backend
+
+#### Installing the Server
 
 Run `10_install_server.sh` to install the server project. This runs `mvn clean install`.
 
 ```sh
+cd src/main/scripts
 10_install_server.sh
 ```
 
-## Test Server
+#### Testing the Server
 
 Run `11_test_server.sh` to test the server project. This runs `mvn test`.
 
 ```sh
+cd src/main/scripts
 11_test_server.sh
 ```
 
-## Build
+#### Building the Project
 
 Run `20_build.sh` to build the project. The build artifacts will be stored in the `target/` directory.
 
 ```sh
+cd src/main/scripts
 20_build.sh
 ```
 
-## Start
+#### Running the Server
 
 Run `30_start_server.sh` to start the Spring Boot server with Java.
 
 ```sh
+cd src/main/scripts
 30_start_server.sh
 ```
 
-## Open in Chrome
+## 🧑‍💻 Usage
+
+### Open in Chrome
 
 Run `40_open_chrome.sh` to start Chrome.
 
 ```sh
+cd src/main/scripts
 40_open_chrome.sh
 ```
 
-## Code scaffolding
+### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Further help
+### Further help
 
 For more help with the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-## Steps to reproduce
+## 🧪 How to create this project
 
-### New Angular Project
+[Steps to reproduce](docs/steps-to-reproduce.md)
 
-```sh
-ng new angular-boilerplate
-```
+## 🗒️ TODO List
 
-- Would you like to enable autocompletion? Yes
-- Would you like to share pseudonymous usage data? No
-- Which stylesheet format would you like to use? CSS
-- Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
-
-### Git
-
-```sh
-git init
-git add *
-git commit -m "initial commit"
-git branch -M main
-git remote add origin https://github.com/hofiorg/angular-boilerplate.git
-git push -u origin main
-```
-
-### Angular Material
-
-```sh
-ng add @angular/material
-```
-
-- Choose a prebuilt theme name, or "custom" for a custom theme: Azure/Blue
-- Set up global Angular Material typography styles? Yes
-- Include the Angular animations module? Include and enable animations
-
-### Bootstrap
-
-```sh
-npm install bootstrap --save
-```
-
-### Ngx Datatable
-
-```sh
-npm install @swimlane/ngx-datatable
-```
-
-### NgRx Store and Effects
-
-```sh
-ng add @ngrx/store@latest
-ng add @ngrx/effects@latest
-```
-
-## TODO List
-
-- Tests for store and services
-- Error handling
-- Details view
-- More validators with regular expressions
-- Data pipes for tables and detail-displays
-- Header with logo
-- Website footer
-- Permissions for routing and other ui-actions
-- Login with OAuth
-  - Example:
-    - <https://www.baeldung.com/rest-api-spring-oauth2-angular>
-    - OAuth - <https://github.com/manfredsteyer/angular-oauth2-oidc>
-- Table filter for columns
-  - Example:
-    - <https://www.w3schools.com/howto/howto_js_filter_table.asp>
-- Table actions for edit/delete/etc.
-- Website navigation
-  - Examples:
-    - <https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l>
-    - <https://medium.com/@ahmedaabouzied/angular-material-responsive-navigation-53b573305d3d>
-    - <https://medium.com/@vperviz/create-an-angular-app-with-a-side-navigation-and-a-dashboard-in-5-minutes-with-schematics-300fc3b8e0a8>
-- Routing with IDs for detail views
-- Build different customers (with different stylesheets)
+[TODO List](docs/todo.md)
